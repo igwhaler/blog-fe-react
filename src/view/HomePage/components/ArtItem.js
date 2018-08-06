@@ -43,7 +43,7 @@ class ArtItem extends Component {
           <div className="article-main">
             <div className="content">
               <h2>
-                <Link to={`article/${article.id}`}>{article.title}</Link>
+                <Link to={`react/article/${article.id}`}>{article.title}</Link>
               </h2>
               <p>{ article.summary }</p>
               <div className="g-cover">
@@ -52,7 +52,7 @@ class ArtItem extends Component {
             </div>
             <div className="more">
               <span>
-                <Link to={`article/${article.id}`}>更多>>></Link>
+                <Link to={`react/article/${article.id}`}>更多>>></Link>
               </span>
             </div>
           </div>

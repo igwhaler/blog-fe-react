@@ -15,8 +15,8 @@ class App extends Component {
         <div className="blog-container">
           <IgwHeader />
 
-          <Route exact path="/" component={HomePage} />
-          <Route path="/article/:id" component={ArtDetail} />
+          <Route exact path="/react" component={HomePage} />
+          <Route path="/react/article/:id" component={ArtDetail} />
           {/* <HomePage /> */}
         </div>
       </Router>
