@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import './styles/index.less'
 import logo from '../../assets/images/logo.png'
 
@@ -23,19 +24,29 @@ class IgwHeader extends Component {
             <div className="menu">
               <ul className="clearfix">
                 <li>
-                  <span>首页</span>
+                  <span>
+                    <Link to="/react/">首页</Link>
+                  </span>
                 </li>
                 <li>
-                  <span>HTML</span>
+                  <span>
+                    <Link to="/react/">HTML</Link>
+                  </span>
                 </li>
                 <li>
-                  <span>CSS</span>
+                  <span>
+                    <Link to="/react/">CSS</Link>
+                  </span>
                 </li>
                 <li>
-                  <span>Javascript</span>
+                  <span>
+                    <Link to="/react/">Javascript</Link>
+                  </span>
                 </li>
                 <li>
-                  <span>杂项</span>
+                  <span>
+                    <Link to="/react/">杂项</Link>
+                  </span>
                 </li>
               </ul>
             </div>
