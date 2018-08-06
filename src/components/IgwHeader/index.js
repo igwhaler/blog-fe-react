@@ -24,29 +24,19 @@ class IgwHeader extends Component {
             <div className="menu">
               <ul className="clearfix">
                 <li>
-                  <span>
-                    <Link to="/react/">首页</Link>
-                  </span>
+                  <Link to="/react/">首页</Link>
                 </li>
                 <li>
-                  <span>
-                    <Link to="/react/">HTML</Link>
-                  </span>
+                  <Link to="/react/">HTML</Link>
                 </li>
                 <li>
-                  <span>
-                    <Link to="/react/">CSS</Link>
-                  </span>
+                  <Link to="/react/">CSS</Link>
                 </li>
                 <li>
-                  <span>
-                    <Link to="/react/">Javascript</Link>
-                  </span>
+                  <Link to="/react/">Javascript</Link>
                 </li>
                 <li>
-                  <span>
-                    <Link to="/react/">杂项</Link>
-                  </span>
+                  <Link to="/react/">杂项</Link>
                 </li>
               </ul>
             </div>
