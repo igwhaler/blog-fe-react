@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import Axios from 'axios'
 import './styles/index.less'
 
+import IgwHeader from '../../components/IgwHeader'
+
 class ArtDetail extends Component {
   constructor(props) {
     super(props)
@@ -48,8 +50,13 @@ class ArtDetail extends Component {
     let { detail } = this.state
 
     return (
-      <div className="art-detail">
-        <div dangerouslySetInnerHTML={{ __html: detail }}></div>
+      <div className="g-blog-container">
+        <div className="blog-container">
+          <IgwHeader />
+          <div className="art-detail">
+            <div dangerouslySetInnerHTML={{ __html: detail }}></div>
+          </div>
+        </div>
       </div>
     )
   }
