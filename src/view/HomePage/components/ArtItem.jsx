@@ -2,6 +2,35 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import '../styles/artItem.less'
 
+function ArtDate (props) {
+  const Utils = {
+    getDate(time) {
+      let date = (new Date(time)).getDate()
+
+      return date < 10 ? `0${date}` : date
+    },
+
+    getMonth(time) {
+      let month = (new Date(time)).getMonth() + 1
+
+      return month < 10 ? `0${month}` : month
+    },
+
+    getYear(time) {
+      return (new Date(time)).getFullYear()
+    }
+  }
+
+  let { created } = props
+
+  return (
+    <div className="article-date">
+      <span className="date day">{Utils.getDate(created)}</span>
+      <span className="date month">{Utils.getYear(created)}-{Utils.getMonth(created)}</span>
+    </div>
+  )
+}
+
 class ArtItem extends Component {
   constructor(props) {
     super(props)
@@ -9,37 +38,14 @@ class ArtItem extends Component {
     this.state = {}
   }
 
-  filters () {
-    return {
-      getDate(time) {
-        let date = (new Date(time)).getDate()
-
-        return date < 10 ? `0${date}` : date
-      },
-
-      getMonth(time) {
-        let month = (new Date(time)).getMonth() + 1
-
-        return month < 10 ? `0${month}` : month
-      },
-
-      getYear(time) {
-        return (new Date(time)).getFullYear()
-      }
-    }
-  }
-
   render() {
     let { article } = this.props
-    let { getDate, getMonth, getYear } = this.filters()
 
     return (
       <div className="art-item">
         <div className="article clearfix">
-          <div className="article-date">
-            <span className="date day">{ getDate(article.created) }</span>
-            <span className="date month">{ getYear(article.created) }-{ getMonth(article.created) }</span>
-          </div>
+          <ArtDate created={article.created} />
+
           <div className="article-main">
             <div className="content">
               <h2>

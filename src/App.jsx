@@ -6,10 +6,10 @@ import {
   Switch
 } from 'react-router-dom'
 
-import HomePage from './view/HomePage/index.jsx'
-import ArtDetail from './view/ArtDetail/index.jsx'
-import Others from './view/Others/index.jsx'
-import NotMatch from './components/NotMatch/index.jsx'
+import HomePage from './view/HomePage'
+import ArtDetail from './view/ArtDetail'
+import Others from './view/Others'
+import NotMatch from './components/NotMatch'
 
 class App extends Component {
   render() {
