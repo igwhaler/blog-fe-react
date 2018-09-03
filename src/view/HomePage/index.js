@@ -14,19 +14,21 @@ class HomePage extends Component {
 
   // graphql获取文章列表
   graphqlArticleList() {
-    Axios.get(`/api/graphql?query={articles{list{id,title,summary,cover,created}}}`).then(res => {
+    return Axios.get(`/api/graphql?query={articles{list{id,title,summary,cover,created}}}`).then(res => {
       console.log(res)
 
-      this.setState({
-        articleList: res.articles.list
-      })
+      return res
     }).catch(err => {
       console.log(err)
     })
   }
 
-  componentWillMount() {
-    this.graphqlArticleList()
+  async componentWillMount() {
+    const res = await this.graphqlArticleList()
+
+    this.setState({
+      articleList: res.articles.list
+    })
   }
 
   render() {
