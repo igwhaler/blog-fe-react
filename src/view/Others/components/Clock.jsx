@@ -24,8 +24,8 @@ class Clock extends Component {
     this.runClock()
   }
 
-  componentWillMount () {
-    this.timer = null
+  componentWillUnmount () {
+    clearInterval(this.timer)
   }
 
   render () {
